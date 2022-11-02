@@ -16,3 +16,11 @@
  let isGameOver = false; 
 
  console.log(isGameOver, typeof isGameOver);
+
+ let ages = [25,17,16,85];
+
+ console.log("ages is an array", ages);
+
+ let secondAge = ages[1];
+ 
+ 
