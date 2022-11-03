@@ -23,4 +23,5 @@
 
  let secondAge = ages[1];
  
- 
+ console.log("student is", nella)
+ console.log("student name is")
