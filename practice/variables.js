@@ -64,12 +64,22 @@
 
 		if(this.lastRefresh < this.refreshRate) return;
 
-		if(this.lastRefresh >= this.refreshRate){
-			this.setColor();
+		//reset the last refresh counter
+		this.lastRefresh = 0;
+
+		//set a new random color to myself
+		this.setColor();
 		}
-	}
-	draw() {}
+
+		draw(){
+			//let square = new Path2D();
+			// square.rect(x,y,size,size);
+
+			context.fillstyle = this.color
+		}
  }
+	   
+ 
 
  let squares = [];
  let gridSize = 4;
@@ -84,8 +94,19 @@
 	"violet"];
 
 
+
  for (let row = 0; row < gridSize; row ++) {
 	for(let col= 0; col < gridSize; col++){
+		// let colorIndex = Math.floor(Math.random() *colors.length);
+		// let color = colors[colorIndex];
+		//drawSquare(col *size, row * size, color, size);
+
+		let x = col * size;
+		let y = row * size;
+		let box = new Clickbox(x,y,size,colors);
+		squares.push(box);
+
+
 		let colorIndex = Math.random(Math.random() * colors.length);
 		let color = colors[colorIndex];
 		drawSquare(col * size, row * size, color, size);
@@ -125,6 +146,11 @@ function drawloop(timestamp){
 	
 	let elapsedTime = timestamp - currentTime;
 	currentTime = timestamp;
+
+	squares.forEach((b) => {
+
+	}
+
 
 	lastRefresh = lastRefresh + elapsedTime;
 
