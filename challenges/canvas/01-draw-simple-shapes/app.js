@@ -31,6 +31,22 @@ const context = canvas.getContext("2d");
 // Add some code here by typing context.fillRect and let intellisense help you
 // to complete the statement. 
 
+context.fillStyle = "red";
+
+let x = 0;
+let y = 0;
+let w = 200;
+let h = 200;
+
+context.fillRect(x,y,w,h);
+
+x = 200
+y = 200 
+w = 500
+h = 500
+
+context.fillRect(x,y,w,h)
+
 /* 
 	This should draw a black rectangle on the canvas at the x and y coordinates
 	and with a width and height that you specified. Let's draw another
@@ -40,6 +56,8 @@ const context = canvas.getContext("2d");
 
 // Add some code here to set the fillStyle property of the context to red
 // HINT: this should look something like this: context.fillStyle = "red"; 
+
+
 
 // Add some code to draw another rectangle.  Make sure you change the x and y
 // coordinates, otherwise it will draw over your first rectangle!
