@@ -39,6 +39,10 @@ function animate(timestamp) {
 	lastTimestamp = timestamp;
 
 	//HINT: Your code should change dx and dy
+
+	dx = 1450;
+	dy = 450;
+
 	context.drawImage(
 		zombieWalk,
 		dx,
